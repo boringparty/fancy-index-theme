@@ -106,8 +106,7 @@ a:active {
 
 #header {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size:10vmin;
-  font-size:10vw;
+  font-size:72pt;
   font-weight:700;
   display:block;
   margin-top:-10px;
@@ -259,6 +258,11 @@ td:nth-of-type(3) {
   #list {
     width:100%;
   }
+  
+  #header {
+    font-size: 20vw;
+  }
+
 
 }
 
