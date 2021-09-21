@@ -6,6 +6,8 @@ There's an optional automatic dark theme in the stylesheet.
 
 ![screenshot](screenshot.png?raw=true "screenshot")
 
+Anybody who is half-decent with CSS and such can clean this up, but it works well as is.
+
 ## NGINX Config
 
 This is set for [password protected directories](https://docs.nginx.com/nginx/admin-guide/security-controls/configuring-http-basic-authentication/). 
