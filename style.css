@@ -1,0 +1,293 @@
+:root {
+  --background: #fae6e5;
+  --foreground: #ff8165;
+  --border:     #ff8165;
+  --bottomimg:  url(/assets/img/hat.png);  
+
+  --darkback:   #282a36;
+  --darkfore:   #6272a4;
+  --darkborder: #6272a4;
+  --darkbotimg: url(/assets/img/hat.png);
+}
+
+
+@font-face {
+  font-family: "icons";
+  src: 
+    url("/assets/fonts/icons.woff2") format("woff2"), 
+    url("/assets/fonts/icons.woff") format("woff"),
+    url("/assets/fonts/icons.ttf") format("truetype"),
+    url("/assets/fonts/icons.eot") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  background:url(/assets/img/back.gif) #fae6e5;
+  height:calc(100% - 45px);}
+
+body {
+  font-family: 'operator','OperatorMono Nerd Font', 'OperatorMono', Courier New, monospace;
+  color: var(--foreground); 
+  font-size:10pt;
+  font-weight:400;
+  background: var(--background);
+  padding:15px;
+  font-style:oblique;
+  -webkit-box-shadow: 0px 0px 0px 3px var(--border); 
+  box-shadow: 0px 0px 0px 3px var(--border);
+  min-height:calc(100% - 45px);
+}
+
+#hat {
+  position: fixed;
+  bottom: 11px;
+  right: 27px;
+  background: var(--bottomimg) no-repeat;
+  height: 60px;
+  width: 57px;
+  background-size: contain;
+}
+
+h1 {
+  font-style: italic;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-style:normal;
+}
+
+#breadcrumbs {
+  margin-left:2px;
+  font-size:10pt!important;
+}
+
+#breadcrumbs a {
+  color: var(--foreground);
+  padding:0px 3px;
+}
+
+.box-content {
+  padding: 15px 0px;
+  font-size:0pt;
+}
+
+#list {
+  width: 500px;
+  border:0px;
+  position:relative;
+  left:-5px;
+  font-style:normal;
+  font-size:10pt;
+}
+
+table {
+  border-spacing: 0px;
+}
+
+th,tr:nth-child(even) {
+  background:none;
+}
+
+#breadcrumbs a:hover,
+tbody tr:hover {
+  background:var(--foreground);
+  color: var(--background);
+}
+
+td {
+  padding-left:0px;
+}
+
+a, 
+a:hover, 
+a:active {
+  text-decoration:none;
+}
+
+#header {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size:10vmin;
+  font-size:10vw;
+  font-weight:700;
+  display:block;
+  margin-top:-10px;
+  margin-left:-6px;
+  text-shadow: 0px 1px 18px #FFF;
+  line-height: 75%;
+  padding: 8px 0px 20px 0px;
+  font-style:normal;
+}
+
+#header p br {
+  content: "";
+  margin: -35px;
+  display: block;
+  font-size: 0pt;
+}
+
+img#stars {
+  height:140px;
+  width: 300px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  opacity: .6;
+}
+
+tbody tr {height: 25px;}
+
+tbody a {
+  padding-left: 0px;
+  color:var(--foreground);}
+
+tbody a[href$="/"] {
+  color: var(--foreground);
+  font-weight: 700;
+  padding: 0px;
+}
+
+tbody a:before {
+  font-family:"icons"!important;
+  content: "\F0214";
+  padding:0px 10px;
+  display:inline-block;
+}
+
+tbody a[href$="../"]:before {
+  content: "\F060C"!important;
+}
+
+tbody a[href$="/"]:before {
+  content: "\F024B";
+  color:var(--foreground);
+}
+
+tbody a[href="t/"]:before{
+  content:"\F0839"
+}
+
+tbody a[href="m/"]:before{
+  content:"\F0381"
+}
+
+tbody a[href$="flac"]:before,
+tbody a[href$="m4a"]:before,
+tbody a[href$="m4r"]:before,
+tbody a[href$="wav"]:before,
+tbody a[href$="mp3"]:before, 
+tbody a[href$="caf"]:before {
+  content: "\F0E2A";
+}
+
+tbody a[href$="mkv"]:before,
+tbody a[href$="mp4"]:before {
+  content: "\F0FCF";
+}
+
+tbody a[href$="png"]:before;
+tbody a[href$="jpg"]:before;
+tbody a[href$="gif"]:before {
+  content:"\F0EB0";
+}
+
+tbody a[href$="epub"]:before,
+tbody a[href$="m4b"]:before,
+tbody a[href$="mobi"]:before {
+  content:"\F0B63";
+}
+
+tbody a[href$="nzb"]:before {
+  content:"\F1764";
+}
+
+tbody a[href$="zip"]:before,
+tbody a[href$="deb"]:before,
+tbody a[href$="rar"]:before {
+  content: "\F07B9";
+}
+
+tbody tr:hover a,
+tbody tr:hover a[href="t/"]:before,
+tbody tr:hover a[href="m/"]:before,
+tbody tr:hover a[href$="/"]:before {
+  color: var(--foreground);
+}
+
+thead {display:none;}
+
+th:nth-of-type(2) a {
+    font-size:0pt;
+}
+
+th:nth-of-type(1) a:nth-of-type(1),
+th:nth-of-type(1) a:nth-of-type(2) {
+  display:none;
+}
+
+th:nth-of-type(2) a:nth-of-type(1):before {
+    content:"";
+    font-size:10pt;
+ display:inline-block;
+}
+
+td:nth-of-type(2),
+td:nth-of-type(3) {
+  padding: 0px 15px;
+}
+
+th:nth-of-type(2),
+th:nth-of-type(3),
+td:nth-of-type(2), 
+td:nth-of-type(3) {
+  text-align: right;}
+
+th:nth-of-type(3),
+td:nth-of-type(3) {
+  display:none;}
+
+@media only screen and (max-width: 600px) {
+
+  th:nth-of-type(2),
+  th:nth-of-type(3),
+  td:nth-of-type(2),
+  td:nth-of-type(3) {
+    display:none;
+    max-width: 95%;
+    overflow-x:hidden;
+  }
+
+  #list {
+    width:100%;
+  }
+
+}
+
+/*
+@media (prefers-color-scheme: dark) {
+
+  html {
+    background: var(--darkback);
+  }
+
+  body {
+    background: #282a36;
+    box-shadow: 0px 0px 0px 3px var(--darkfore);
+  }
+
+  #header {
+    text-shadow: 0px 1px 18px var(--darkborder);
+  }
+
+  body, 
+  tbody a,
+  tbody a:before,
+  tbody a[href$="/"],
+  tbody a[href$="/"]:before,
+  #breadcrumbs a
+    {color:var(--darkfore);}
+
+  #hat
+   background: var(--darkbotimg) no-repeat;
+  }
+}
+*/
