@@ -209,7 +209,7 @@ tbody tr:hover a,
 tbody tr:hover a[href="t/"]:before,
 tbody tr:hover a[href="m/"]:before,
 tbody tr:hover a[href$="/"]:before {
-  color: var(--foreground);
+  color: var(--background);
 }
 
 thead {display:none;}
