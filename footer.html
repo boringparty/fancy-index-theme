@@ -1,19 +1,7 @@
-<script>
-  var loc = window.location.pathname;
-  var segments = loc.split('/');
-  var breadcrumbs = '';
-  var currentPath = '/';
-  for (var i=0; i<segments.length; i++) {
-    if (segments[i] !== '') {
-      currentPath += segments[i] + '/';
-      breadcrumbs += ' › <a href="' +  currentPath + '">' + window.unescape(segments[i]) + '<\/a>';
-    } else if (segments.length -1 !== i) {
-      currentPath += '';
-      breadcrumbs += '<a href="' + currentPath + '">Home<\/a>';
-    }
-  }
-  document.getElementById('breadcrumbs').innerHTML = breadcrumbs;
-</script>
+</div>
+<pre id="readme"></pre>
+<script src="/assets/js/readme.js"></script>
+<script src="/assets/js/breadcrumbs.js"></script>
 <div id="hat"></div>
 </body>
 </html>
