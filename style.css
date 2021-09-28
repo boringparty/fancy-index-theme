@@ -22,6 +22,20 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "operator";
+  src: url("/assets/fonts/operator.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "operator";
+  src: url("/assets/fonts/operatoritalic.otf") format("opentype");
+  font-weight: normal;
+  font-style: italic;
+}
+
 html {
   background:url(/assets/img/back.gif) #fae6e5;
   height:calc(100% - 45px);}
@@ -33,7 +47,6 @@ body {
   font-weight:400;
   background: var(--background);
   padding:15px;
-  font-style:oblique;
   -webkit-box-shadow: 0px 0px 0px 3px var(--border); 
   box-shadow: 0px 0px 0px 3px var(--border);
   min-height:calc(100% - 45px);
@@ -59,6 +72,7 @@ h1 {
 #breadcrumbs {
   margin-left:2px;
   font-size:10pt!important;
+  font-style:oblique;
 }
 
 #breadcrumbs a {
@@ -131,6 +145,14 @@ img#stars {
   top: 10px;
   left: 10px;
   opacity: .6;
+}
+
+#readme{
+  margin:0px 0px 0px 5px;
+  padding-top:20px;
+  border-top:1px dotted var(--foreground);
+  max-width: 90%;
+  width:500px;
 }
 
 tbody tr {height: 25px;}
@@ -246,6 +268,10 @@ td:nth-of-type(3) {
 
 @media only screen and (max-width: 600px) {
 
+  #header {
+   font-size: 20vw;
+  }
+
   th:nth-of-type(2),
   th:nth-of-type(3),
   td:nth-of-type(2),
@@ -258,11 +284,6 @@ td:nth-of-type(3) {
   #list {
     width:100%;
   }
-  
-  #header {
-    font-size: 20vw;
-  }
-
 
 }
 
