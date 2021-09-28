@@ -8,6 +8,8 @@ There's an optional automatic dark theme in the stylesheet.
 
 Anybody who is half-decent with CSS and such can clean this up, but it works well as is.
 
+It isn't in the screenshot, but if you had a readme.txt, it'll load it below the table.
+
 ## NGINX Config
 
 This is set for [password protected directories](https://docs.nginx.com/nginx/admin-guide/security-controls/configuring-http-basic-authentication/). 
@@ -25,7 +27,7 @@ server {
         fancyindex on;
         fancyindex_exact_size off;
         fancyindex_css_href /assets/style.css;
-        fancyindex_ignore assets;
+        fancyindex_ignore assets readme.txt;
         fancyindex_time_format "%b %y";
         fancyindex_header /assets/header.html;
         fancyindex_footer /assets/footer.html;
