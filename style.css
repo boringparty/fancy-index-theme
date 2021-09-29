@@ -75,10 +75,10 @@ h1 {
   font-style:oblique;
 }
 
-#breadcrumbs a {
-  color: var(--foreground);
-  padding:0px 3px;
-}
+  #breadcrumbs a {
+    color: var(--foreground);
+    padding: 2px 3px 3px 3px;
+  }
 
 .box-content {
   padding: 15px 0px;
@@ -103,12 +103,12 @@ th,tr:nth-child(even) {
 }
 
 #breadcrumbs a:hover,
-tbody tr:hover {
+table#list tbody tr:hover {
   background:var(--foreground);
   color: var(--background);
 }
 
-td {
+table#list td {
   padding-left:0px;
 }
 
@@ -123,7 +123,7 @@ a:active {
   font-size:72pt;
   font-weight:700;
   display:block;
-  margin-top:-10px;
+  margin-top:-12px;
   margin-left:-6px;
   text-shadow: 0px 1px 18px #FFF;
   line-height: 75%;
@@ -149,121 +149,137 @@ img#stars {
 
 #readme{
   margin:0px 0px 0px 5px;
-  padding-top:20px;
   border-top:1px dotted var(--foreground);
   max-width: 90%;
   width:500px;
 }
 
-tbody tr {height: 25px;}
+  #readme a:link,
+  #readme a:hover,
+  #readme a:active,
+  #readme a:visited 
+   {color: #655c5c;
+  } 
 
-tbody a {
+  #readme a:hover {
+   font-weight: 700;
+  }
+
+  #readme img {
+   max-width: 500px;
+   max-height: 500px;
+   margin: 20px 0px;
+  }
+
+table#list tbody tr {height: 25px;}
+
+table#list tbody a {
   padding-left: 0px;
   color:var(--foreground);}
 
-tbody a[href$="/"] {
+table#list tbody a[href$="/"] {
   color: var(--foreground);
   font-weight: 700;
   padding: 0px;
 }
 
-tbody a:before {
+table#list tbody a:before {
   font-family:"icons"!important;
   content: "\F0214";
   padding:0px 10px;
   display:inline-block;
 }
 
-tbody a[href$="../"]:before {
+table#list tbody a[href$="../"]:before {
   content: "\F060C"!important;
 }
 
-tbody a[href$="/"]:before {
+table#list tbody a[href$="/"]:before {
   content: "\F024B";
   color:var(--foreground);
 }
 
-tbody a[href="t/"]:before{
+table#list tbody a[href="t/"]:before{
   content:"\F0839"
 }
 
-tbody a[href="m/"]:before{
+table#list tbody a[href="m/"]:before{
   content:"\F0381"
 }
 
-tbody a[href$="flac"]:before,
-tbody a[href$="m4a"]:before,
-tbody a[href$="m4r"]:before,
-tbody a[href$="wav"]:before,
-tbody a[href$="mp3"]:before, 
-tbody a[href$="caf"]:before {
+table#list tbody a[href$="flac"]:before,
+table#list tbody a[href$="m4a"]:before,
+table#list tbody a[href$="m4r"]:before,
+table#list tbody a[href$="wav"]:before,
+table#list tbody a[href$="mp3"]:before, 
+table#list tbody a[href$="caf"]:before {
   content: "\F0E2A";
 }
 
-tbody a[href$="mkv"]:before,
-tbody a[href$="mp4"]:before {
+table#list tbody a[href$="mkv"]:before,
+table#list tbody a[href$="mp4"]:before {
   content: "\F0FCF";
 }
 
-tbody a[href$="png"]:before;
-tbody a[href$="jpg"]:before;
-tbody a[href$="gif"]:before {
+table#list tbody a[href$="png"]:before;
+table#list tbody a[href$="jpg"]:before;
+table#list tbody a[href$="gif"]:before {
   content:"\F0EB0";
 }
 
-tbody a[href$="epub"]:before,
-tbody a[href$="m4b"]:before,
-tbody a[href$="mobi"]:before {
+table#list tbody a[href$="epub"]:before,
+table#list tbody a[href$="m4b"]:before,
+table#list tbody a[href$="mobi"]:before {
   content:"\F0B63";
 }
 
-tbody a[href$="nzb"]:before {
+table#list tbody a[href$="nzb"]:before {
   content:"\F1764";
 }
 
-tbody a[href$="zip"]:before,
-tbody a[href$="deb"]:before,
-tbody a[href$="rar"]:before {
+table#list tbody a[href$="zip"]:before,
+table#list tbody a[href$="deb"]:before,
+table#list tbody a[href$="rar"]:before {
   content: "\F07B9";
 }
 
-tbody tr:hover a,
-tbody tr:hover a[href="t/"]:before,
-tbody tr:hover a[href="m/"]:before,
-tbody tr:hover a[href$="/"]:before {
+table#list tbody tr:hover a,
+table#list tbody tr:hover a[href="t/"]:before,
+table#list tbody tr:hover a[href="m/"]:before,
+table#list tbody tr:hover a[href$="/"]:before {
   color: var(--background);
 }
 
-thead {display:none;}
+table#list thead {display:none;}
 
-th:nth-of-type(2) a {
+table#list th:nth-of-type(2) a {
     font-size:0pt;
 }
 
-th:nth-of-type(1) a:nth-of-type(1),
-th:nth-of-type(1) a:nth-of-type(2) {
+table#list th:nth-of-type(1) a:nth-of-type(1),
+table#list th:nth-of-type(1) a:nth-of-type(2) {
   display:none;
 }
 
-th:nth-of-type(2) a:nth-of-type(1):before {
+table#list th:nth-of-type(2) a:nth-of-type(1):before {
     content:"";
     font-size:10pt;
  display:inline-block;
 }
 
-td:nth-of-type(2),
-td:nth-of-type(3) {
+table#list td:nth-of-type(2),
+table#list td:nth-of-type(3) {
   padding: 0px 15px;
 }
 
-th:nth-of-type(2),
-th:nth-of-type(3),
-td:nth-of-type(2), 
-td:nth-of-type(3) {
+table#list th:nth-of-type(2),
+table#list th:nth-of-type(3),
+table#list td:nth-of-type(2), 
+table#list td:nth-of-type(3) {
   text-align: right;}
 
-th:nth-of-type(3),
-td:nth-of-type(3) {
+table#list th:nth-of-type(3),
+table#list td:nth-of-type(3) {
   display:none;}
 
 @media only screen and (max-width: 600px) {
@@ -272,10 +288,10 @@ td:nth-of-type(3) {
    font-size: 20vw;
   }
 
-  th:nth-of-type(2),
-  th:nth-of-type(3),
-  td:nth-of-type(2),
-  td:nth-of-type(3) {
+  table#list th:nth-of-type(2),
+  table#list th:nth-of-type(3),
+  table#list td:nth-of-type(2),
+  table#list td:nth-of-type(3) {
     display:none;
     max-width: 95%;
     overflow-x:hidden;
@@ -304,10 +320,10 @@ td:nth-of-type(3) {
   }
 
   body, 
-  tbody a,
-  tbody a:before,
-  tbody a[href$="/"],
-  tbody a[href$="/"]:before,
+  table#list tbody a,
+  table#list tbody a:before,
+  table#list tbody a[href$="/"],
+  table#list tbody a[href$="/"]:before,
   #breadcrumbs a
     {color:var(--darkfore);}
 
