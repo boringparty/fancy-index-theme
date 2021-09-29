@@ -8,7 +8,7 @@ There's an optional automatic dark theme in the stylesheet.
 
 Anybody who is half-decent with CSS and such can clean this up, but it works well as is.
 
-It isn't in the screenshot, but if you had a readme.md, it'll load the basic markdown (bold, italics, links, images) below the file listing. Each folder has its own readme.md, which is handy. 
+I'm using zero-md for markdown, which is overkill, but handy. I couldn't get it to override the css, so I had to modify the file... which might not be kosher.
 
 ## NGINX Config
 
