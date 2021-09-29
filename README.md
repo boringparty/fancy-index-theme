@@ -13,11 +13,6 @@ Anybody who is half-decent with CSS and such can clean this up, but it works wel
 This is set for [password protected directories](https://docs.nginx.com/nginx/admin-guide/security-controls/configuring-http-basic-authentication/). 
 
 ```
-server {
-  listen 443 ssl;
-  server_name dl.domain.com;
-  index index.html index.php index.htm;
-  root /var/www/domain.com/dl;
   location / {
     try_files $uri $uri/ =404;
         auth_basic "Restricted Content";
