@@ -1,7 +1,39 @@
 </div>
 <script src="/assets/js/breadcrumbs.js"></script>
-<script src="/assets/js/readme.js"></script>
-<div id ="readme"></div>
+<div>
+ <zero-md id="readme" src="readme.md">
+  <template data-merge="append">
+    <style>
+     a:link {color:var(--foreground);}
+     a:hover {font-weight: 700;}
+     img {max-width: 485px;}
+     table {
+      table-layout: fixed;
+      width: 485px;
+      border-collapse: collapse;
+      border: 1px solid var(--foreground);
+     }
+     thead th:nth-child(1) {
+      width: 30%;
+     }
+     thead th:nth-child(2) {
+      width: 20%;
+     }
+     thead th:nth-child(3) {
+      width: 15%;
+     }
+     thead th:nth-child(4) {
+      width: 35%;
+     }
+     th {padding: 5px 10px; background: var(--foreground); color: var(--background);border: 1px solid var(--foreground);}
+     td {
+      padding: 5px 10px;
+      border: 1px dotted var(--foreground);
+     }
+   </style>
+  </template>
+ </zero-md>
+</div>
 <div id="hat"></div>
 </body>
 </html>
